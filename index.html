@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>UNIX Permissions Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>UNIX Permissions Generator</h1>
+            <p>Translate Unix permissions from symbolic to numberal to chmod commands and back.</p>
+            <div class="app">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>Select</h2>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Read</th>
+                                    <th>Write</th>
+                                    <th>Execute</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Owner</th>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="o:r">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="o:w">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="o:x">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Group</th>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="g:r">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="g:w">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="g:x">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>World</th>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="w:r">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="w:w">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="form-select" value="w:x">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Octal Notation</h2>
+                        <hr>
+                        <input type="text" class="form-control" id="form-octal">
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Symbolic</h2>
+                        <hr>
+                        <input type="text" class="form-control" id="form-symbolic">
+                    </div>
+                </div>
+                <button type="button" id="parse-submit" class="btn btn-default">Parse</button>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
